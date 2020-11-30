@@ -1,4 +1,11 @@
 # Maven
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'woocc-MPN-13-03(a3482545-d6d6-4f33-b486-fd39bd68190e)'
+    appType: 'webAppLinux'
+    WebAppName: 'woocceventweb'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
